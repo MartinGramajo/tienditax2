@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 90.5%;
+}
+
+body {
+  font-family: "Bubblegum Sans", cursive;
+  background-image: linear-gradient(to right, #8e2de247, #4a00e066),
+    url("./assets/img/fondohome.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.tamaño {
+  width: 18rem;
+}
+
+.imagen-card {
+  width: 12rem;
+  height: 12rem;
+}
+
+.fondo-carta {
+  background: rgb(63, 8, 128);
+  background: linear-gradient(
+    90deg,
+    rgba(63, 8, 128, 1) 0%,
+    rgba(11, 0, 66, 1) 35%,
+    rgba(62, 0, 133, 1) 84%,
+    rgba(76, 2, 161, 1) 100%
+  );
+}
+
+.fondo-body-carta {
+  background: rgb(166, 34, 195);
+  background: linear-gradient(
+    0deg,
+    rgb(14, 2, 85) 0%,
+    rgba(23, 27, 209, 1) 50%,
+    rgba(3, 90, 172, 0.97) 100%
+  );
+}
+
+.fondo-footer-carta {
+  background: rgb(32, 1, 38);
+  background: linear-gradient(
+    0deg,
+    rgba(32, 1, 38, 1) 0%,
+    rgb(3, 130, 139) 50%,
+    rgba(2, 29, 163, 0.969625350140056) 100%
+  );
+}
+
+.producto-carrito {
+  width: 200px;
+  height: 200px;
+}
+
+.disabled {
+  background-color: red;
+}
