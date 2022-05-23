@@ -65,3 +65,14 @@ body {
 .disabled {
   background-color: red;
 }
+
+.fixed-footer {
+  margin-top: auto;
+}
+
+@media (max-width: 425px) {
+  .responsive {
+    display: flex;
+    justify-content: center;
+  }
+}

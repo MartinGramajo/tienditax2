@@ -1,31 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ProductsContext } from "../context/ProductsContext";
 import Footer from "./Footer";
 import NavReact from "./NavReact";
 import Productos from "./Productos";
 
-export default function HomeContenido({
-  productos,
-  onClick,
-  carrito,
-  setProductos,
-  setCarrito,
-  chequeado,
-  chequear,
-  borrarChango,
-}) {
+export default function HomeContenido({ productos }) {
+  const { carrito } = useContext(ProductsContext);
+
   return (
-    <div>
+    <div className="d-flex flex-column" style={{ minHeight: "100vh" }}>
       <NavReact carrito={carrito} />
-      <Productos
-        chequeado={chequeado}
-        chequear={chequear}
-        borrarChango={borrarChango}
-        carrito={carrito}
-        productos={productos}
-        setProductos={setProductos}
-        setCarrito={setCarrito}
-        onClick={onClick}
-      />
+      <Productos productos={productos} />
       <Footer />
     </div>
   );

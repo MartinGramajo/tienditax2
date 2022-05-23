@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Button, Card, Collapse, ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { ProductsContext } from "../context/ProductsContext";
 
-export default function ProductoCard({
-  producto,
-  onClick,
-  carrito,
-  chequear,
-  borrarChango,
-}) {
+export default function ProductoCard({ producto }) {
+  const { onClick, carrito, chequear, borrarChango } =
+    useContext(ProductsContext);
   const { id, category, description, image, price, title, rating } = producto;
   const [open, setOpen] = useState(false);
   const [chequeado, setChequeado] = useState(false);
@@ -35,8 +32,8 @@ export default function ProductoCard({
   }, [carrito]);
 
   return (
-    <div>
-      <Card className="my-4 tamaño fondo-carta">
+    <div className="responsive">
+      <Card className="my-4 tamaño fondo-carta ">
         <div className="d-flex justify-content-center">
           <Card.Img className="imagen-card mt-4" variant="top" src={image} />
         </div>
@@ -83,7 +80,7 @@ export default function ProductoCard({
               aria-expanded={open}
               size="sm"
               onClick={() => chequear(id)}
-              variant="success"
+              // variant="success"
             >
               <span> Chequear</span>
             </Button> */}

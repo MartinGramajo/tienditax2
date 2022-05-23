@@ -1,7 +1,11 @@
 import NavReact from "../components/NavReact";
 import { Button, Card, ListGroup } from "react-bootstrap";
+import { useContext } from "react";
+import { ProductsContext } from "../context/ProductsContext";
 
-export default function Carrito({ carrito, setCarrito, borrarChango }) {
+export default function Carrito() {
+  const { carrito, setCarrito, borrarChango } = useContext(ProductsContext);
+
   return (
     <>
       <NavReact carrito={carrito} />
